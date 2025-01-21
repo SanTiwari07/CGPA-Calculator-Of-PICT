@@ -10,5 +10,7 @@ Custom Inputs: User-friendly prompts for entering marks and attendance.
 
 # Subjects and Labs:
 Theory Subjects: LAC, QP, MFR, IEEE, CPPS.
+
 Labs: QP Lab, MFR Lab, IEEE Lab, CPPS Lab.
+
 Additional Components: FAB Lab, IKS.
