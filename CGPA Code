@@ -221,7 +221,7 @@ int main(){
     else if(fab>=0){
         fab=0;
     }
-    cout<<"LAC Grade:"<<grp[0]<<endl<<"QP Grade:"<<grp[1]<<endl<<"MFR Grade:"<<grp[2]<<endl<<"IEEE Grade:"<<grp[3]<<endl<<"CPPS Grade:"<<grp[4]<<endl<<"LAC Grade:"<<grp[0]<<endl<<"QP Lab Grade:"<<grp1[1]<<endl<<"MFR Lab Grade:"<<grp1[2]<<endl<<"IEEE Lab Grade:"<<grp1[3]<<endl<<"CPPS Lab Grade:"<<grp1[4]<<endl<<"FAB Lab Grade:"<<fab<<endl
-    <<"IKS Grade(1):"<<ikss1<<endl<<"IKS Grade(2):"<<ikss2<<"CCA Grade:"<<cca<<endl<<endl;
+    cout<<endl<<"LAC Grade:"<<grp[0]<<endl<<"QP Grade:"<<grp[1]<<endl<<"MFR Grade:"<<grp[2]<<endl<<"IEEE Grade:"<<grp[3]<<endl<<"CPPS Grade:"<<grp[4]<<endl<<"LAC Grade:"<<grp[0]<<endl<<"QP Lab Grade:"<<grp1[1]<<endl<<"MFR Lab Grade:"<<grp1[2]<<endl<<"IEEE Lab Grade:"<<grp1[3]<<endl<<"CPPS Lab Grade:"<<grp1[4]<<endl<<"FAB Lab Grade:"<<fab<<endl
+    <<"IKS Grade(1):"<<ikss1<<endl<<"IKS Grade(2):"<<ikss2<<endl<<"CCA Grade:"<<cca<<endl<<endl;
     cout<<"Your CGPA is "<<(3*grp[0] + 2*grp[1]+ 2*grp[2]+ 2*grp[3]+ 2*grp[4]+fab+ikss1+ikss2+grp1[0]+grp1[1]+grp1[2]+grp1[3]+grp1[4]+cca)/20; 
 }
