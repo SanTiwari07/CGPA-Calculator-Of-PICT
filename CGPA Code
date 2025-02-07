@@ -7,7 +7,7 @@ int main(){
     float iks;
     int ise[5],twiks1,twiks2;
     float ese[5];
-    float attend[5],grp[4],grp1[4];
+    float attend[5],grp[5],grp1[5];
     int cie[5],tw[5];
     for(int a = 0 ; a < 5 ; a++){
         cout<<"Enter Mid Sem. marks of "<<sub[a]<<" (out of 20):";
@@ -72,23 +72,26 @@ int main(){
         ese[e]= round(ese[e]);
     }
     cout<<endl;
-    float lac = (cie[0]+attend[0]+tw[0]+ese[0]+ise[0])/1.25;
+    float lac = (cie[0]+attend[0]+ese[0]+ise[0])/1;
     lac = round(lac);
-    for(int g = 1 ; g < 5 ; g++){
-        grp[g-1] = cie[g]+attend[g]+ese[g]+ise[g];
-        grp[g-1] = round(grp[g-1]);
+    for(int g = 0 ; g < 5 ; g++){
+        grp[g] = cie[g]+attend[g]+ese[g]+ise[g];
+        grp[g] = round(grp[g]);
     }
-    for(int k = 0 ; k < 4 ; k++){
-        grp1[k]=tw[k+1]*4;
+    for(int k = 0 ; k < 5 ; k++){
+        grp1[k]=tw[k]*4;
     }
-    int ikss = (iks+twiks1+twiks2)*2;
+    int ikss1 = (iks+twiks1)*4;
+    int ikss2 = twiks2*4;
     int fab;
     cout<<"enter fab lab marks (out of 25):";
     cin>>fab;
     
-    cout<<endl<<endl<<"Assuming you earned 1 credit in CCA,\n";
+    cout<<endl<<"Enter Your CCA credit:";
+    int cca;
+    cin>>cca;
     fab = fab*4;
-    for(int l = 0 ; l<4 ; l++){
+    for(int l = 0 ; l<5 ; l++){
         if(grp[l]>=91){
             grp[l]=10;
         }
@@ -114,7 +117,7 @@ int main(){
             grp[l]=0;
         }
     }
-    for(int ll = 0 ; ll<4 ; ll++){
+    for(int ll = 0 ; ll<5 ; ll++){
         if(grp1[ll]>=91){
             grp1[ll]=10;
         }
@@ -140,56 +143,58 @@ int main(){
             grp1[ll]=0;
         }
     }
-    if(lac>=91){
-        lac=10;
-    }
-    else if(lac>=81){
-        lac=9;
-    }
-    else if(lac>=71){
-        lac=8;
-    }
-    else if(lac>=61){
-        lac=7;
-    }
-    else if(lac>=51){
-        lac=6;
-    }
-    else if(lac>=45){
-        lac=5;
-    }
-    else if(lac>=40){
-        lac=4;
-    }
-    else if(lac>=0){
-        lac=0;
-    }
+    
 
 
 
-    if(ikss>=91){
-        ikss=10;
+    if(ikss1>=91){
+        ikss1=10;
     }
-    else if(ikss>=81){
-        ikss=9;
+    else if(ikss1>=81){
+        ikss1=9;
     }
-    else if(ikss>=71){
-        ikss=8;
+    else if(ikss1>=71){
+        ikss1=8;
     }
-    else if(ikss>=61){
-        ikss=7;
+    else if(ikss1>=61){
+        ikss1=7;
     }
-    else if(ikss>=51){
-        ikss=6;
+    else if(ikss1>=51){
+        ikss1=6;
     }
-    else if(ikss>=45){
-        ikss=5;
+    else if(ikss1>=45){
+        ikss1=5;
     }
-    else if(ikss>=40){
-        ikss=4;
+    else if(ikss1>=40){
+        ikss1=4;
     }
-    else if(ikss>=0){
-        ikss=0;
+    else if(ikss1>=0){
+        ikss1=0;
+    }
+
+    if(ikss2>=91){
+        ikss2=10;
+    }
+    else if(ikss2>=81){
+        ikss2=9;
+    }
+    else if(ikss2>=71){
+        ikss2=8;
+    }
+    else if(ikss2>=61){
+        ikss2=7;
+    }
+    else if(ikss2>=51){
+        ikss2=6;
+    }
+    else if(ikss2>=45){
+        ikss2=5;
+    }
+    else if(ikss2>=40){
+        ikss2=4;
+    }
+    else if(ikss2>=0){
+        ikss2=0;
     }
 
     if(fab>=91){
@@ -216,7 +221,7 @@ int main(){
     else if(fab>=0){
         fab=0;
     }
-    cout<<"LAC Grade:"<<lac<<endl<<"QP Grade:"<<grp[0]<<endl<<"MFR Grade:"<<grp[1]<<endl<<"IEEE Grade:"<<grp[2]<<endl<<"CPPS Grade:"<<grp[3]<<endl<<"QP Lab Grade:"<<grp1[0]<<endl<<"MFR Lab Grade:"<<grp1[1]<<endl<<"IEEE Lab Grade:"<<grp1[2]<<endl<<"CPPS Lab Grade:"<<grp1[3]<<endl<<"FAB Lab Grade:"<<fab<<endl
-    <<"IKS Grade:"<<ikss<<endl<<endl;
-    cout<<"Your CGPA is "<<(4*lac + 2*grp[0]+ 2*grp[1]+ 2*grp[2]+ 2*grp[3]+fab+2*ikss+grp1[0]+grp1[1]+grp1[2]+grp1[3]+10)/20; 
+    cout<<"LAC Grade:"<<grp[0]<<endl<<"QP Grade:"<<grp[1]<<endl<<"MFR Grade:"<<grp[2]<<endl<<"IEEE Grade:"<<grp[3]<<endl<<"CPPS Grade:"<<grp[4]<<endl<<"LAC Grade:"<<grp[0]<<endl<<"QP Lab Grade:"<<grp1[1]<<endl<<"MFR Lab Grade:"<<grp1[2]<<endl<<"IEEE Lab Grade:"<<grp1[3]<<endl<<"CPPS Lab Grade:"<<grp1[4]<<endl<<"FAB Lab Grade:"<<fab<<endl
+    <<"IKS Grade(1):"<<ikss1<<endl<<"IKS Grade(2):"<<ikss2<<"CCA Grade:"<<cca<<endl<<endl;
+    cout<<"Your CGPA is "<<(3*grp[0] + 2*grp[1]+ 2*grp[2]+ 2*grp[3]+ 2*grp[4]+fab+ikss1+ikss2+grp1[0]+grp1[1]+grp1[2]+grp1[3]+grp1[4]+cca)/20; 
 }
